@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DurgaPhukan_Transition_Animation</title>
+    <style>
+        .a{
+            width: 360px;
+            height: 360px;
+            /* border: 2px solid black; */
+            margin: 15vh auto 10px;
+            transition: all;
+        }
+        div{
+            width: 130px;
+            height: 130px;
+            border-radius:65px;
+            /* border:2px solid black; */
+            transition: all;
+            /* transition-duration: .4s; */
+        }
+        /* Positioning and colouring of the circular divs */
+        .p{
+            z-index: 2;
+            position: fixed;
+            top: 114px;
+            background-color: #dc2f02;
+        }
+        .q{
+            z-index: 1;
+            background-color: #ffd60a;
+            position: fixed;
+            top: 114px;
+            right: 587px;
+        }
+        .r{
+            background-color: #006400;
+            position: fixed;
+            bottom: 278px;
+            
+
+        }
+        .s{
+            background-color:#2196f3;
+            position: fixed;
+            bottom: 278px;
+            right: 587px;
+        }
+        .x{
+            padding: 5px;
+            height: 40px;
+            width: 20vw;
+            margin: 2px auto;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: space-between;
+        }
+       /* Making class for transitions without using animation library */
+        .first1{
+            width: 357px;
+            background-color: #ffd60a;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .fir1{
+            height: 357px;
+            background-color: #2196f3;
+            transition: all;
+            transition-duration: .5s;
+            /* cursor: pointer; */
+        }
+        .First1{
+            width: 357px;
+            background-color: #006400;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .Fir1{
+            transition: all;
+            transition-duration: .5s;
+            height: 357px;
+            background-color: #dc2f02;
+        }
+        .first2{
+            width: 130px;
+            background-color: #ffd60a;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .fir2{
+            transition: all;
+            transition-duration: .5s;
+            height: 130px;
+            background-color: #2196f3;
+        }
+        .First2{
+            width: 130px;
+            background-color: #006400;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .Fir2{
+            transition: all;
+            transition-duration: .5s;
+            height: 130px;
+            background-color: #dc2f02;
+        }
+        .second1{
+            width: 357px;
+            background-color: #2196f3;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .sec1{
+            transition: all;
+            transition-duration: .5s;
+            height: 357px;
+            background-color: #006400;
+        }
+        .Second1{
+            width: 357px;
+            background-color: #dc2f02;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .Sec1{
+            transition: all;
+            transition-duration: .5s;
+            height: 357px;
+            background-color: #ffd60a;
+        }
+        .second2{
+            width: 130px;
+            background-color: #2196f3;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .sec2{
+            transition: all;
+            transition-duration: .5s;
+            height: 130px;
+            background-color: #006400;
+        }
+        .Second2{
+            width: 130px;
+            background-color: #dc2f02;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .Sec2{
+            transition: all;
+            transition-duration: .5s;
+            height: 130px;
+            background-color: #ffd60a;
+        }
+        .third1{
+            width: 357px;
+            background-color: #006400;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .thr1{
+            transition: all;
+            transition-duration: .5s;
+            height: 357px;
+            background-color: #dc2f02;
+            /* cursor: pointer; */
+        }
+        .Third1{
+            width: 357px;
+            background-color: #ffd60a;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .Thr1{
+            height: 357px;
+            background-color: #2196f3;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .third2{
+            width: 130px;
+            background-color: #006400;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .thr2{
+            transition: all;
+            transition-duration: .5s;
+            height: 130px;
+            background-color: #dc2f02;
+        }
+        .Third2{
+            width: 130px;
+            background-color: #ffd60a;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .Thr2{
+            transition: all;
+            transition-duration: .5s;
+            height: 130px;
+            background-color: #2196f3;
+        }
+        .fourth1{
+            width: 357px;
+            background-color: #dc2f02;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .for1{
+            transition: all;
+            transition-duration: .5s;
+            height: 357px;
+            background-color: #ffd60a;
+            /* cursor: pointer; */
+        }
+        .Fourth1{
+            width: 357px;
+            background-color: #2196f3;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .For1{
+            transition: all;
+            transition-duration: .5s;
+            height: 357px;
+            background-color: #006400;
+        }
+        .fourth2{
+            width: 130px;
+            background-color: #dc2f02;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .for2{
+            transition: all;
+            transition-duration: .5s;
+            height: 130px;
+            background-color: #ffd60a;
+        }
+        .Fourth2{
+            width: 130px;
+            background-color: #2196f3;
+            transition: all;
+            transition-duration: .5s;
+        }
+        .For2{
+            transition: all;
+            transition-duration: .5s;
+            height: 130px;
+            background-color: #006400;
+        }
+        #k,#l{
+            font-size: 1.3rem;
+            font-weight: 400;
+            padding: 5px 15px;
+            background-color: green;
+            color: white;
+            box-shadow: 105,105,205;
+        }
+        #k,#l:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section class="a">
+            <div class="p" id="di1"></div>
+            <div class="q" id="di2"></div>
+            <div class="r" id="di3"></div>
+            <div class="s" id="di4"></div>
+    </section>
+
+    <section class="x">
+        <article>
+            <button id="k">Start</button>
+        </article>
+        <article>
+            <button id="l">Stop</button>   
+        </article>
+    </section>
+    
+    
+
+
+
+    <script>
+        // Selecing the required elements
+        const btn1 = document.getElementById('k');
+        const btn2 = document.getElementById('l');
+        const div1 = document.getElementById('di1');
+        const div2 = document.getElementById('di2');
+        const div3 = document.getElementById('di3');
+        const div4 = document.getElementById('di4');
+
+        btn1.addEventListener('click',(e)=>{
+            bt1 = e.target.innerText;
+            console.log(`Button ${bt1} is pressed`);
+
+
+        function fun(){
+            setTimeout(()=>{
+                console.log("time");
+                div1.classList.remove('fourth2');
+                div4.classList.remove('Fourth2');
+                div2.classList.remove('for2');
+                div3.classList.remove('For2');
+
+                div1.classList.add('first1');
+                div4.classList.add('First1');
+                div2.classList.add('fir1');
+                div3.classList.add('Fir1');
+            },500)
+            setTimeout(()=>{
+                console.log("time");
+                div1.classList.remove('first1');
+                div1.classList.add('first2');
+                div4.classList.remove('First1');
+                div4.classList.add('First2');
+                div2.classList.remove('fir1');
+                div2.classList.add('fir2');
+                div3.classList.remove('Fir1');
+                div3.classList.add('Fir2');
+            },1000)
+
+            setTimeout(()=>{
+                console.log("time");
+                div1.classList.remove('first2');
+                div1.classList.add('second1');
+                div4.classList.remove('First2');
+                div4.classList.add('Second1');
+                div2.classList.remove('fir2');
+                div2.classList.add('sec1');
+                div3.classList.remove('Fir2');
+                div3.classList.add('Sec1');
+            },1500)
+            setTimeout(()=>{
+                console.log("time");
+                div1.classList.remove('second1');
+                div1.classList.add('second2');
+                div4.classList.remove('Second1');
+                div4.classList.add('Second2');
+                div2.classList.remove('sec1');
+                div2.classList.add('sec2');
+                div3.classList.remove('Sec1');
+                div3.classList.add('Sec2');
+            },2000)
+            setTimeout(()=>{
+                console.log("time");
+                div1.classList.remove('second2');
+                div4.classList.remove('Second2');
+                div2.classList.remove('sec2');
+                div3.classList.remove('Sec2');
+
+                div1.classList.add('third1');
+                div4.classList.add('Third1');
+                div2.classList.add('thr1');
+                div3.classList.add('Thr1');
+            },2500)
+            setTimeout(()=>{
+                console.log("time");
+                div1.classList.remove('third1');
+                div4.classList.remove('Third1');
+                div2.classList.remove('thr1');
+                div3.classList.remove('Thr1');
+
+                div1.classList.add('third2');
+                div4.classList.add('Third2');
+                div2.classList.add('thr2');
+                div3.classList.add('Thr2');
+            },3000)
+
+            setTimeout(()=>{
+                console.log("time");
+                div1.classList.remove('third2');
+                div4.classList.remove('Third2');
+                div2.classList.remove('thr2');
+                div3.classList.remove('Thr2');
+
+                div1.classList.add('fourth1');
+                div4.classList.add('Fourth1');
+                div2.classList.add('for1');
+                div3.classList.add('For1');
+            },3500)
+            setTimeout(()=>{
+                console.log("time");
+                div1.classList.remove('fourth1');
+                div4.classList.remove('Fourth1');
+                div2.classList.remove('for1');
+                div3.classList.remove('For1');
+
+                div1.classList.add('fourth2');
+                div4.classList.add('Fourth2');
+                div2.classList.add('for2');
+                div3.classList.add('For2');
+            },4000)
+        }
+        // Running the function for first loop
+        fun();
+
+        //For infinite loops
+        const id = setInterval(() => {
+
+            fun();
+
+        },4000);
+
+        btn2.addEventListener('click',(e)=>{
+            bt2 = e.target.innerText;
+            console.log(`Button ${bt2} is pressed`);
+            clearInterval(id);
+            })
+
+    })
+
+
+
+
+    </script>
+</body>
+</html>
